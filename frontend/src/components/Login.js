@@ -4,14 +4,12 @@ import { login } from '../api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Login() {
+const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const navigate = useNavigate();
 
-
-    // function to handle login button click
     const handleLogin = async () => {
         try {
             const response = await login(email, password);
@@ -25,116 +23,35 @@ function Login() {
         }
     };
 
-    const styles = {
-        container: {
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundImage: 'url(https://i.pinimg.com/564x/a4/50/6e/a4506ee296a6dbd7aa6fe26abd70ebf9.jpg)', // Replace with your own image URL
-
-            backgroundPosition: 'center',
-        },
-        card: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: '80%',
-            maxWidth: '900px',
-            padding: '40px',
-            backgroundColor: 'rgba(255, 255, 255, 0.9)',
-            borderRadius: '15px',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-        },
-        leftContent: {
-            flex: 1,
-            textAlign: 'left',
-            paddingRight: '20px',
-        },
-        rightContent: {
-            flex: 1,
-            textAlign: 'right',
-        },
-        quote: {
-            fontSize: '24px',
-            fontWeight: 'bold',
-            color: '#333',
-            fontStyle: 'italic',
-        },
-        form: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
-        input: {
-            width: '100%',
-            padding: '10px',
-            fontSize: '16px',
-            margin: '10px 0',
-            borderRadius: '5px',
-            border: '1px solid #ccc',
-        },
-        buttonContainer: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            width: '100%',
-            marginTop: '20px',
-        },
-        button: {
-            padding: '10px 20px',
-            fontSize: '16px',
-            color: '#fff',
-            backgroundColor: '#007bff',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            margin: '5px',
-            boxShadow: '0 5px 15px rgba(0, 123, 255, 0.3)',
-            transition: 'background-color 0.3s',
-            flex: 1,
-        },
-        buttonIcon: {
-            marginLeft: '10px',
-        },
-        error: {
-            color: 'red',
-            margin: '10px 0',
-        },
-    };
-
     return (
         <div style={styles.container}>
-            <div style={styles.card}>
-                <div style={styles.leftContent}>
-                    <p style={styles.quote}>
+            <div style={styles.cardContainer}>
+                <div style={styles.leftContentContainer}>
+                    <p style={styles.quoteTextStyle}>
                         "Travel is the only thing you buy that makes you richer." <br />
                         Start your journey with Musafir, your personalized travel itinerary generator.
                     </p>
                 </div>
-                <div style={styles.rightContent}>
-                    <div style={styles.form}>
+                <div style={styles.rightContentContainer}>
+                    <div style={styles.formContainer}>
                         <h2>Login</h2>
-                        {error && <p style={styles.error}>{error}</p>}
-                        <input
+                        {error && <p style={styles.errorTextStyle}>{error}</p>}
+                        <input placeholder="Email"
                             type="email"
-                            placeholder="Email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            style={styles.input}
-                        />
-                        <input
+                            style={styles.textAlign} />
+                        <input placeholder="Password"
                             type="password"
-                            placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            style={styles.input}
-                        />
-                        <div style={styles.buttonContainer}>
-                            <button onClick={handleLogin} style={styles.button}>
-                                Login <span style={styles.buttonIcon}>→</span>
+                            style={styles.textInputStyle} />
+                        <div style={styles.buttonsContainer}>
+                            <button onClick={() => handleLogin()} style={styles.buttonContainer}>
+                                Login <span style={{ marginLeft: '10px' }}>→</span>
                             </button>
-                            <button onClick={() => navigate('/register')} style={styles.button}>
-                                Register <span style={styles.buttonIcon}>→</span>
+                            <button onClick={() => navigate('/register')} style={styles.buttonContainer}>
+                                Register <span style={{ marginLeft: '10px' }}>→</span>
                             </button>
                         </div>
                     </div>
@@ -146,3 +63,76 @@ function Login() {
 }
 
 export default Login;
+
+const styles = {
+    container: {
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundImage: 'url(https://i.pinimg.com/564x/a4/50/6e/a4506ee296a6dbd7aa6fe26abd70ebf9.jpg)',
+        backgroundPosition: 'center',
+    },
+    cardContainer: {
+        padding: '40px',
+        width: '80%',
+        maxWidth: '900px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        borderRadius: '15px',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+    },
+    leftContentContainer: {
+        flex: 1,
+        paddingRight: '20px',
+        textAlign: 'left',
+    },
+    rightContentContainer: {
+        flex: 1,
+        textAlign: 'right',
+    },
+    quoteTextStyle: {
+        fontSize: '24px',
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        color: '#333333',
+    },
+    formContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    textInputStyle: {
+        padding: '10px',
+        margin: '10px 0',
+        width: '100%',
+        fontSize: '16px',
+        border: '1px solid #cccccc',
+        borderRadius: '5px',
+    },
+    buttonsContainer: {
+        marginTop: '20px',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+    buttonContainer: {
+        flex: 1,
+        padding: '10px 20px',
+        margin: '5px',
+        backgroundColor: '#007bff',
+        fontSize: '16px',
+        color: '#ffffff',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        boxShadow: '0 5px 15px rgba(0, 123, 255, 0.3)',
+        transition: 'background-color 0.3s',
+    },
+    errorTextStyle: {
+        margin: '10px 0',
+        color: 'red',
+    },
+};
