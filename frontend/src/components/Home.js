@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Navbar';
+import 'react-toastify/dist/ReactToastify.css';
 
-function Home() {
+const Home = () => {
     const navigate = useNavigate();
 
     const goToItineraryPage = () => {
@@ -49,7 +49,7 @@ function Home() {
                             "Musafir planned the perfect trip for my family. From the cultural sites to the best restaurants, every detail was thought out. We
                             can't wait for our next adventure!"
                         </p>
-                        <p style={styles.testimonialAuthorTextStyle}>- A Satisfied Traveler</p>
+                        <p style={styles.testimonialSubTextStyle}>- A Satisfied Traveler</p>
                     </div>
                 </div>
                 <footer style={styles.footerContainer}>
@@ -164,7 +164,7 @@ const styles = {
         fontSize: '18px',
         color: '#555555',
     },
-    testimonialAuthorTextStyle: {
+    testimonialSubTextStyle: {
         fontSize: '16px',
         fontWeight: 'bold',
         color: '#333333',

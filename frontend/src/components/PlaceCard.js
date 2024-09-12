@@ -11,13 +11,11 @@ const PlaceCard = ({ place }) => {
     } = place;
 
     return (
-        <Card style={{ width: '18rem', marginBottom: '20px' }}>
+        <Card style={styles.cardContainer}>
             {photos && photos.length > 0 && (
-                <Card.Img
-                    variant="top"
+                <Card.Img variant="top"
                     src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos[0].photo_reference}&key=YOUR_GOOGLE_API_KEY`}
-                    alt={name}
-                />
+                    alt={name} />
             )}
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
@@ -36,3 +34,10 @@ const PlaceCard = ({ place }) => {
 };
 
 export default PlaceCard;
+
+const styles = {
+    cardContainer: {
+        marginBottom: '20px',
+        width: '18rem',
+    },
+};

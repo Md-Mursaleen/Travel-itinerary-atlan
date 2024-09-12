@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function WelcomePage() {
+const WelcomePage = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
@@ -16,10 +16,10 @@ function WelcomePage() {
         <div style={styles.container}>
             <div style={styles.headerContainer}>
                 <div style={{ padding: '15px' }}>
-                    <button onClick={() => handleLogin()} style={styles.buttonContainer}>
+                    <button onClick={handleLogin} style={styles.buttonContainer}>
                         Login
                     </button>
-                    <button onClick={() => handleRegister()} style={styles.buttonContainer}>
+                    <button onClick={handleRegister} style={styles.buttonContainer}>
                         Register
                     </button>
                 </div>

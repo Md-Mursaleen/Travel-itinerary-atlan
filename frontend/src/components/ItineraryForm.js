@@ -121,7 +121,7 @@ const styles = {
         width: '100%',
         fontSize: '16px',
         borderRadius: '5px',
-        border: '1px solid #ddd',
+        border: '1px solid #dddddd',
     },
     buttonContainer: {
         padding: '15px 30px',

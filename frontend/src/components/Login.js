@@ -13,10 +13,10 @@ const Login = () => {
     const handleLogin = async () => {
         try {
             const response = await login(email, password);
-            console.log('Login successful:', response);
+            console.log('Login successful: ', response);
             localStorage.setItem('email', email); // Store email in localStorage
             toast.success('Login successful!');
-            setTimeout(() => navigate('/home'), 2000); // Redirect after 2 seconds
+            setTimeout(() => navigate('/home'), 2000);
         } catch (error) {
             setError(error.message || 'An error occurred during login.');
             toast.error('Login failed. Please try again.');
@@ -133,6 +133,6 @@ const styles = {
     },
     errorTextStyle: {
         margin: '10px 0',
-        color: 'red',
+        color: '#ff0000',
     },
 };

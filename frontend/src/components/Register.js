@@ -4,12 +4,12 @@ import { register } from '../api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Register() {
+const Register = () => {
+    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const navigate = useNavigate();
 
     const handleRegister = async () => {
         try {
@@ -139,6 +139,6 @@ const styles = {
     },
     errorTextStyle: {
         margin: '10px 0',
-        color: 'red',
+        color: '#ff0000',
     },
 };

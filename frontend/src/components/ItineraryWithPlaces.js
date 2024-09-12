@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Button, Card } from 'react-bootstrap';
 
 const ItineraryWithPlaces = ({ show, onHide, placeDetails }) => {
+
     return (
         <Modal show={show} onHide={onHide} size="lg">
             <Modal.Header closeButton>

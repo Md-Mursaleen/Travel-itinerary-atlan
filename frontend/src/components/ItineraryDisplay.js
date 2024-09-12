@@ -51,8 +51,8 @@ const ItineraryDisplay = ({ itinerary }) => {
             const response = await axios.get(`http://127.0.0.1:8080/get-places`, {
                 params: {
                     location_name: locationName,
-                    type: type
-                }
+                    type: type,
+                },
             });
             console.log('Places found:', response.data.results);
             setPlaceDetails(response.data.results);
@@ -66,7 +66,7 @@ const ItineraryDisplay = ({ itinerary }) => {
         setSaving(true);
         try {
             const user_email = localStorage.getItem('email'); // Get the user email from localStorage
-            const dataToSave = { user_email, itinerary_data: itinerary }; // Wrap itinerary in itinerary_data
+            const dataToSave = { user_email, itinerary_data: itinerary };
             await saveItinerary(dataToSave);
             alert('Itinerary saved successfully!');
         } catch (error) {
@@ -78,9 +78,8 @@ const ItineraryDisplay = ({ itinerary }) => {
     };
 
     const handleLogout = () => {
-        // Implement logout functionality
         alert('Logout successful!');
-        navigate('/login'); // Redirect to login page
+        navigate('/login');
     };
 
     if (!itinerary) {
