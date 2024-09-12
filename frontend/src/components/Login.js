@@ -47,7 +47,7 @@ const Login = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             style={styles.textInputStyle} />
                         <div style={styles.buttonsContainer}>
-                            <button onClick={() => handleLogin()} style={styles.buttonContainer}>
+                            <button onClick={handleLogin} style={styles.buttonContainer}>
                                 Login <span style={{ marginLeft: '10px' }}>→</span>
                             </button>
                             <button onClick={() => navigate('/register')} style={styles.buttonContainer}>
