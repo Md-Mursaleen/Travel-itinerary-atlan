@@ -42,6 +42,85 @@ const Profile = () => {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
 
+    const styles = {
+        container: {
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundImage: 'url(https://i.pinimg.com/originals/71/e2/9e/71e29ed74f14223911310d9002443cbf.gif)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            overflow: 'hidden',
+        },
+        contentContainer: {
+            width: '100%',
+            display: 'flex',
+            flexGrow: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            overflowY: 'auto',
+        },
+        profileContainer: {
+            marginTop: '80px',
+            width: '80%',
+            maxHeight: '80vh',
+            maxWidth: '1000px',
+            display: 'flex',
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            borderRadius: '10px',
+            boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
+            overflowY: 'auto',
+        },
+        leftPanelContainer: {
+            padding: '20px',
+            width: '30%',
+            backgroundColor: '#f5f5f5',
+            textAlign: 'left',
+        },
+        rightPanelContainer: {
+            padding: '20px',
+            width: '70%',
+        },
+        profileItemContainer: {
+            marginBottom: '10px',
+            fontSize: '18px',
+            color: '#333333',
+        },
+        itineraryItemContainer: {
+            padding: '15px',
+            marginBottom: '15px',
+            backgroundColor: '#f9f9f9',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            cursor: 'pointer',
+        },
+        itineraryHeadingTextStyle: {
+            fontSize: '20px',
+            fontWeight: 'bold',
+        },
+        itineraryDetailsContainer: {
+            paddingTop: '10px',
+            display: expandedIndex === null ? 'none' : 'block',
+        },
+        budgetContainer: {
+            padding: '10px',
+            marginTop: '10px',
+            backgroundColor: '#e9e9e9',
+            borderRadius: '5px',
+        },
+        dayDetailsContainer: {
+            padding: '10px',
+            marginTop: '10px',
+            backgroundColor: '#ffffff',
+            borderRadius: '5px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        },
+        errorTextStyle: {
+            marginTop: '20px',
+            color: '#ff0000',
+        },
+    };
+
     return (
         <div style={styles.container}>
             <Navbar />
@@ -108,82 +187,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-const styles = {
-    container: {
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundImage: 'url(https://i.pinimg.com/originals/71/e2/9e/71e29ed74f14223911310d9002443cbf.gif)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        overflow: 'hidden',
-    },
-    contentContainer: {
-        width: '100%',
-        display: 'flex',
-        flexGrow: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        overflowY: 'auto',
-    },
-    profileContainer: {
-        marginTop: '80px',
-        width: '80%',
-        maxHeight: '80vh',
-        maxWidth: '1000px',
-        display: 'flex',
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-        borderRadius: '10px',
-        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
-        overflowY: 'auto',
-    },
-    leftPanelContainer: {
-        padding: '20px',
-        width: '30%',
-        backgroundColor: '#f5f5f5',
-        textAlign: 'left',
-    },
-    rightPanelContainer: {
-        padding: '20px',
-        width: '70%',
-    },
-    profileItemContainer: {
-        marginBottom: '10px',
-        fontSize: '18px',
-        color: '#333333',
-    },
-    itineraryItemContainer: {
-        padding: '15px',
-        marginBottom: '15px',
-        backgroundColor: '#f9f9f9',
-        borderRadius: '8px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        cursor: 'pointer',
-    },
-    itineraryHeadingTextStyle: {
-        fontSize: '20px',
-        fontWeight: 'bold',
-    },
-    itineraryDetailsContainer: {
-        paddingTop: '10px',
-        display: expandedIndex === null ? 'none' : 'block',
-    },
-    budgetContainer: {
-        padding: '10px',
-        marginTop: '10px',
-        backgroundColor: '#e9e9e9',
-        borderRadius: '5px',
-    },
-    dayDetailsContainer: {
-        padding: '10px',
-        marginTop: '10px',
-        backgroundColor: '#ffffff',
-        borderRadius: '5px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    },
-    errorTextStyle: {
-        marginTop: '20px',
-        color: '#ff0000',
-    },
-};
