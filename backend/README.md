@@ -25,7 +25,7 @@ Before running the application, ensure you have the following:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/md-mursaleen/backend.git
+   git clone https://github.com/Md-Mursaleen/Travel-itinerary-generator.git
    cd backend
    ```
 
