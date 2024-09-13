@@ -1,22 +1,24 @@
 # Travel Itinerary Generator(Backend)
 
-This is the backend for the our web application, built using Python and Flask. It provides API endpoints for managing user authentication, generating and saving travel itineraries, fetching weather data, and interacting with places of interest.
+This is the backend service for our web application, **Travel Itinerary Generator**, designed to help users create personalized travel itineraries based on preferences such as budget, interests, and trip duration. Built using **Python** and **Flask**, it offers API endpoints for user authentication, itinerary generation, weather data fetching, and interacting with places of interest.
 
 ## Features
 
-- User registration and authentication using Firebase.
-- Travel itinerary generation using the Google Gemini API.
-- Weather data fetching using the OpenWeatherMap API.
-- MongoDB integration for storing user data and itineraries.
-- RESTful API structure.
+- **User Registration & Authentication**: Secure authentication using Firebase.
+- **Itinerary Generation**: Powered by the Google Gemini API for curated travel plans.
+- **Weather Data**: Fetch real-time weather information using the OpenWeatherMap API.
+- **MongoDB Integration**: Persistent storage of user data and itineraries.
+- **RESTful API**: Structured API for seamless front-end integration.
 
-## Requirements
+## Prerequisites
 
-- Python 3.7+
-- MongoDB Atlas account (or any other MongoDB instance)
-- Firebase project (for authentication)
-- Google Gemini API access
-- OpenWeatherMap API key
+Before running the application, ensure you have the following:
+
+- **Python** (version 3.7 or higher)
+- **MongoDB Atlas** (or any other MongoDB instance for database)
+- **Firebase** (for user authentication services)
+- **Google Gemini API** (for travel itinerary generation)
+- **OpenWeatherMap API** (for weather data access)
 
 ## Installation
 
