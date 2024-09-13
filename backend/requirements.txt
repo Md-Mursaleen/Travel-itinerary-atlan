@@ -1,0 +1,7 @@
+firebase-admin
+flask
+python-dotenv
+google-generativeai
+flask_cors
+pymongo
+googlemaps

@@ -28,7 +28,7 @@ const WelcomePage = () => {
                 Welcome to <span style={styles.textStyle}>Travel Mantra</span>
             </h1>
             <p style={styles.subHeadingTextStyle}>Your own personalized travel itinerary generator</p>
-            <p style={styles.titleTextSytle}>Build, personalize, and optimize your itineraries with our free AI trip planner. Designed for vacations, workations, and everyday adventures.</p>
+            <p style={styles.titleTextSytle}>Build, personalize, and optimize your itineraries with our free AI trip planner. Designed for vacations, workstations, and everyday adventures.</p>
         </div>
     );
 }
