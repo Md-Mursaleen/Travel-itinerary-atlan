@@ -30,12 +30,12 @@ const Register = () => {
                     <p style={styles.quoteTextStyle}>
                         "The world is a book, and those who do not travel read only one page."
                         <br />
-                        Start your adventure with Musafir, where we create personalized itineraries tailored to your budget, interests, and duration.
+                        Start your adventure with Travel Mantra, where we create personalized itineraries tailored to your budget, interests, and duration.
                     </p>
                 </div>
                 <div style={styles.rightContentContainer}>
                     <div style={styles.formContainer}>
-                        <h2>Register</h2>
+                        <h2 style={styles.textStyle}>Register</h2>
                         {error && <p style={styles.errorTextStyle}>{error}</p>}
                         <input placeholder="Username"
                             type="text"
@@ -81,7 +81,7 @@ const styles = {
     },
     cardContainer: {
         padding: '40px',
-        width: '80%',
+        width: '60%',
         maxWidth: '900px',
         display: 'flex',
         justifyContent: 'space-between',
@@ -102,7 +102,6 @@ const styles = {
     quoteTextStyle: {
         fontSize: '24px',
         fontWeight: 'bold',
-        fontStyle: 'italic',
         color: '#333333',
     },
     formContainer: {
@@ -110,32 +109,41 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
     },
+    textStyle: {
+        fontSize: '28px',
+        fontWeight: 'bold',
+        color: '#000000',
+    },
     textInputStyle: {
         padding: '10px',
         margin: '10px 0',
         width: '100%',
         fontSize: '16px',
+        color: '#000000',
+        border: '1px solid #cdcdcd',
         borderRadius: '5px',
-        border: '1px solid #cccccc',
     },
     buttonsContainer: {
         marginTop: '20px',
-        width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
     },
     buttonContainer: {
-        padding: '10px 20px',
+        flex: 1,
+        padding: '14px',
         margin: '5px',
-        backgroundColor: '#28a745',
-        fontSize: '16px',
+        width: '130px',
+        height: '45px',
+        marginLeft: '15px',
+        backgroundColor: '#000000',
+        fontSize: '14px',
+        fontWeight: '500',
         color: '#ffffff',
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
-        boxShadow: '0 5px 15px rgba(40, 167, 69, 0.3)',
+        boxShadow: '0 5px 15px rgba(255, 255, 255, 0.8)',
         transition: 'background-color 0.3s',
-        flex: 1,
     },
     errorTextStyle: {
         margin: '10px 0',

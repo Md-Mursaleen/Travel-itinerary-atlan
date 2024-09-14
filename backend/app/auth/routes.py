@@ -2,7 +2,6 @@ from flask import request, jsonify, current_app
 from firebase_admin import auth
 from app.auth import auth_bp
 
-
 @auth_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -28,6 +27,14 @@ def register():
         return jsonify({"error": "Missing username, email, or password"}), 400
 
     try:
+        # Check if user already exists
+        try:
+            existing_user = auth.get_user_by_email(email)
+            return jsonify({"error": "User with this email already exists"}), 400
+        except auth.UserNotFoundError:
+            # User does not exist, proceed to create
+            pass
+
         # Create the user in Firebase
         user = auth.create_user(email=email, password=password)
         custom_token = auth.create_custom_token(user.uid)
@@ -45,6 +52,8 @@ def register():
         users_collection.insert_one(user_data)
 
         return jsonify({"token": custom_token.decode('utf-8')}), 201
+    except auth.EmailAlreadyExistsError:
+        return jsonify({"error": "User with this email already exists"}), 400
     except Exception as e:
         return jsonify({"error": f"Registration failed: {str(e)}"}), 400
 

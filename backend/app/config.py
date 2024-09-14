@@ -9,12 +9,11 @@ cred = credentials.Certificate(r'F:\Travel Itinerary Generator\backend\app\fireb
 firebase_admin.initialize_app(cred)
 
 # Set up the Google Gemini API key
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key="AIzaSyCVxcaj8OG61xOLKdyk8rzmOozyyysJjJU")
 
 # Initialize the Google Gemini model    
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Initialize Google Maps API client
 gmaps = googlemaps.Client(key="AIzaSyBvQn2U-8RObBlrWbots9zKUwIbCf0Uneg")
-
 

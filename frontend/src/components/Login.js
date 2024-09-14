@@ -29,18 +29,18 @@ const Login = () => {
                 <div style={styles.leftContentContainer}>
                     <p style={styles.quoteTextStyle}>
                         "Travel is the only thing you buy that makes you richer." <br />
-                        Start your journey with Musafir, your personalized travel itinerary generator.
+                        Start your journey with Travel Mantra, your personalized travel itinerary generator.
                     </p>
                 </div>
                 <div style={styles.rightContentContainer}>
                     <div style={styles.formContainer}>
-                        <h2>Login</h2>
+                        <h2 style={styles.textStyle}>Login</h2>
                         {error && <p style={styles.errorTextStyle}>{error}</p>}
                         <input placeholder="Email"
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            style={styles.textAlign} />
+                            style={styles.textInputStyle} />
                         <input placeholder="Password"
                             type="password"
                             value={password}
@@ -70,12 +70,11 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: 'url(https://i.pinimg.com/564x/a4/50/6e/a4506ee296a6dbd7aa6fe26abd70ebf9.jpg)',
-        backgroundPosition: 'center',
+        backgroundImage: 'url(https://i.pinimg.com/736x/4c/32/f7/4c32f7322911644c66a249e283f07153.jpg)',
     },
     cardContainer: {
         padding: '40px',
-        width: '80%',
+        width: '60%',
         maxWidth: '900px',
         display: 'flex',
         justifyContent: 'space-between',
@@ -96,7 +95,6 @@ const styles = {
     quoteTextStyle: {
         fontSize: '24px',
         fontWeight: 'bold',
-        fontStyle: 'italic',
         color: '#333333',
     },
     formContainer: {
@@ -104,31 +102,40 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
     },
+    textStyle: {
+        fontSize: '28px',
+        fontWeight: 'bold',
+        color: '#000000',
+    },
     textInputStyle: {
         padding: '10px',
         margin: '10px 0',
         width: '100%',
         fontSize: '16px',
-        border: '1px solid #cccccc',
+        color: '#000000',
+        border: '1px solid #cdcdcd',
         borderRadius: '5px',
     },
     buttonsContainer: {
         marginTop: '20px',
-        width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
     },
     buttonContainer: {
         flex: 1,
-        padding: '10px 20px',
+        padding: '14px',
         margin: '5px',
-        backgroundColor: '#007bff',
-        fontSize: '16px',
+        width: '130px',
+        height: '45px',
+        marginLeft: '15px',
+        backgroundColor: '#000000',
+        fontSize: '14px',
+        fontWeight: '500',
         color: '#ffffff',
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
-        boxShadow: '0 5px 15px rgba(0, 123, 255, 0.3)',
+        boxShadow: '0 5px 15px rgba(255, 255, 255, 0.8)',
         transition: 'background-color 0.3s',
     },
     errorTextStyle: {
