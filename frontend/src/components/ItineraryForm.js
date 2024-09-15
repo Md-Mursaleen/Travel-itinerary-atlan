@@ -92,9 +92,14 @@ export default ItineraryForm;
 
 const styles = {
     container: {
+        flex: 1,
         padding: '40px',
-        marginTop: '120px',
+        marginTop: '80px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: '90%',
         display: 'flex',
+        alignSelf: 'center',
         backgroundImage: 'url(https://i.pinimg.com/originals/d7/ae/01/d7ae0170d3d5ffcbaa7f02fdda387a3b.gif)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -118,7 +123,7 @@ const styles = {
     textInputStyle: {
         padding: '10px',
         margin: '10px',
-        width: '100%',
+        width: '90%',
         fontSize: '16px',
         borderRadius: '5px',
         border: '1px solid #dddddd',

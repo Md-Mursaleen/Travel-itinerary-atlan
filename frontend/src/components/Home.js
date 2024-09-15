@@ -15,45 +15,45 @@ const Home = () => {
         <div style={styles.body}>
             <Navbar />
             <div style={styles.container}>
-                <h1 style={styles.headerTextStyle}>Musafir - <i>Har Safar m Apka Humsafar</i></h1>
+                <h1 style={styles.headerTextStyle}>AI Trip Planner - <i>Plan your dream trip</i></h1>
                 <p style={styles.quoteTextStyle}>"Travel is the only thing you buy that makes you richer."</p>
                 <div style={styles.buttonsContainer}>
                     <button onClick={goToItineraryPage} style={styles.buttonContainer}>
                         Create a Personalized Travel Itinerary
                     </button>
                 </div>
-                <div style={styles.section}>
+                <div style={styles.sectionContainer}>
                     <h2 style={styles.sectionHeaderTextStyle}>What You Can Experience</h2>
                     <div style={styles.experienceSection}>
                         <div style={styles.experienceCardContainer}>
-                            <img src="https://i.pinimg.com/564x/b3/b5/c4/b3b5c4075cf4efbe55938cc0db655752.jpg" alt="Adventure" style={styles.image} />
+                            <img alt="Adventure" src="https://i.pinimg.com/564x/b3/b5/c4/b3b5c4075cf4efbe55938cc0db655752.jpg" />
                             <h3>Adventure Awaits</h3>
                             <p>Experience the thrill of adventure with custom itineraries tailored to your need for excitement.</p>
                         </div>
                         <div style={styles.experienceCardContainer}>
-                            <img src="https://i.pinimg.com/564x/c4/17/11/c41711124b4fa243a7bd64d09e773fe5.jpg" alt="Relaxation" style={styles.image} />
+                            <img alt="Relaxation" src="https://i.pinimg.com/564x/c4/17/11/c41711124b4fa243a7bd64d09e773fe5.jpg" />
                             <h3>Relax and Unwind</h3>
                             <p>Find peace and tranquility with travel plans that offer serene and relaxing experiences.</p>
                         </div>
                         <div style={styles.experienceCardContainer}>
-                            <img src="https://i.pinimg.com/564x/e9/e8/2d/e9e82ddbaff121f4616d5ebb7efbdaeb.jpg" alt="Culture" style={styles.image} />
+                            <img alt="Culture" src="https://i.pinimg.com/564x/e9/e8/2d/e9e82ddbaff121f4616d5ebb7efbdaeb.jpg" />
                             <h3>Cultural Immersion</h3>
                             <p>Immerse yourself in the culture of your destinations, with itineraries that focus on heritage and local experiences.</p>
                         </div>
                     </div>
                 </div>
                 <div style={styles.testimonialSection}>
-                    <h2 style={styles.sectionHeaderTextStyle}>What Our Travelers Say</h2>
+                    <h2 style={styles.sectionHeaderTextStyle}>What Our Traveler Say</h2>
                     <div style={styles.testimonialCardContainer}>
                         <p style={styles.testimonialTextStyle}>
-                            "Musafir planned the perfect trip for my family. From the cultural sites to the best restaurants, every detail was thought out. We
+                            "AI Trip Planner planned the perfect trip for my family. From the cultural sites to the best restaurants, every detail was thoughtout. We
                             can't wait for our next adventure!"
                         </p>
                         <p style={styles.testimonialSubTextStyle}>- A Satisfied Traveler</p>
                     </div>
                 </div>
                 <footer style={styles.footerContainer}>
-                    <p style={{ fontSize: '14px' }}>© 2024 Musafir. All rights reserved.</p>
+                    <p style={{ fontSize: '14px' }}>© 2024 AI Trip Planner. All rights reserved.</p>
                 </footer>
                 <ToastContainer />
             </div>
@@ -111,7 +111,7 @@ const styles = {
         boxShadow: '0 5px 15px rgba(40, 167, 69, 0.3)',
         transition: 'background-color 0.3s',
     },
-    section: {
+    sectionContainer: {
         padding: '50px 20px',
         backgroundColor: 'rgba(255, 255, 255, 0.7)',
         backgroundImage: 'linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%)',

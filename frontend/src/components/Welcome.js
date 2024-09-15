@@ -27,7 +27,7 @@ const WelcomePage = () => {
                 </div>
             </div>
             <h1 style={styles.headingTextStyle}>
-                Welcome to <span style={styles.textStyle}>Travel Mantra</span>
+                Welcome to <span style={styles.textStyle}>AI Trip Planner</span>
             </h1>
             <p style={styles.subHeadingTextStyle}>Your own personalized travel itinerary generator</p>
             <p style={styles.titleTextSytle}>Build, personalize, and optimize your itineraries with our free AI trip planner. Designed for vacations, workstations, and everyday adventures.</p>
@@ -70,8 +70,8 @@ const styles = {
         backgroundColor: '#ffffff',
         fontSize: '14px',
         fontWeight: '500',
-        color: '#3350b9',
-        border: '2px solid #3350b9',
+        color: '#71797e',
+        border: '2px solid #b2beb5',
         borderRadius: '5px',
         cursor: 'pointer',
         boxShadow: '0 5px 15px rgba(255, 255, 255, 0.8)',
@@ -85,7 +85,7 @@ const styles = {
     },
     textStyle: {
         fontStyle: 'italic',
-        color: '#f2a92e',
+        color: '#148cff',
     },
     subHeadingTextStyle: {
         marginTop: '10px',

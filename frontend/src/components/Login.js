@@ -29,7 +29,7 @@ const Login = () => {
                 <div style={styles.leftContentContainer}>
                     <p style={styles.quoteTextStyle}>
                         "Travel is the only thing you buy that makes you richer." <br />
-                        Start your journey with Travel Mantra, your personalized travel itinerary generator.
+                        Start your journey with AI Trip Planner, your personalized travel itinerary generator.
                     </p>
                 </div>
                 <div style={styles.rightContentContainer}>
@@ -123,16 +123,20 @@ const styles = {
     },
     buttonContainer: {
         flex: 1,
-        padding: '14px',
+        paddingHorizontal: '16px',
+        paddingVertical: '10px',
         margin: '5px',
-        width: '130px',
-        height: '45px',
+        width: '120px',
+        height: '42px',
         marginLeft: '15px',
-        backgroundColor: '#000000',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#ffffff',
         fontSize: '14px',
         fontWeight: '500',
-        color: '#ffffff',
-        border: 'none',
+        color: '#000000',
+        border: '2px solid #000000',
+        // border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
         boxShadow: '0 5px 15px rgba(255, 255, 255, 0.8)',

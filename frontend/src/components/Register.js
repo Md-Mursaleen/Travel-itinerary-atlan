@@ -30,7 +30,7 @@ const Register = () => {
                     <p style={styles.quoteTextStyle}>
                         "The world is a book, and those who do not travel read only one page."
                         <br />
-                        Start your adventure with Travel Mantra, where we create personalized itineraries tailored to your budget, interests, and duration.
+                        Start your adventure with AI Trip Planner, where we create personalized itineraries tailored to your budget, interests, and duration.
                     </p>
                 </div>
                 <div style={styles.rightContentContainer}>
@@ -130,16 +130,19 @@ const styles = {
     },
     buttonContainer: {
         flex: 1,
-        padding: '14px',
+        paddingHorizontal: '16px',
+        paddingVertical: '10px',
         margin: '5px',
-        width: '130px',
-        height: '45px',
+        width: '120px',
+        height: '42px',
         marginLeft: '15px',
-        backgroundColor: '#000000',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#ffffff',
         fontSize: '14px',
         fontWeight: '500',
-        color: '#ffffff',
-        border: 'none',
+        color: '#000000',
+        border: '2px solid #000000',
         borderRadius: '5px',
         cursor: 'pointer',
         boxShadow: '0 5px 15px rgba(255, 255, 255, 0.8)',

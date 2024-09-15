@@ -48,7 +48,7 @@ const ItineraryDisplay = ({ itinerary }) => {
 
     const handleExplore = async (locationName, type) => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8080/get-places`, {
+            const response = await axios.get(`http://127.0.0.1:5000/get-places`, {
                 params: {
                     location_name: locationName,
                     type: type,

@@ -16,17 +16,17 @@ const Navbar = () => {
     };
 
     return (
-        <nav style={styles.navbar}>
+        <nav style={styles.navBarContainer}>
             <button onClick={() => navigate('/home')} style={styles.navButtonContainer}>
-                <FontAwesomeIcon icon={faHome} style={{ marginRight: '8px' }} />
+                <FontAwesomeIcon icon={faHome} style={styles.iconStyle} />
                 Home
             </button>
             <button onClick={handleProfile} style={styles.navButtonContainer}>
-                <FontAwesomeIcon icon={faUser} style={{ marginRight: '8px' }} />
+                <FontAwesomeIcon icon={faUser} style={styles.iconStyle} />
                 Profile
             </button>
             <button onClick={handleLogout} style={styles.navButtonContainer}>
-                <FontAwesomeIcon icon={faSignOutAlt} style={{ marginRight: '8px' }} />
+                <FontAwesomeIcon icon={faSignOutAlt} style={styles.iconStyle} />
                 Logout
             </button>
         </nav>
@@ -36,13 +36,14 @@ const Navbar = () => {
 export default Navbar;
 
 const styles = {
-    navbar: {
+    navBarContainer: {
         position: 'fixed',
-        padding: '10px 20px',
+        padding: '10px 0px',
         left: 0,
         top: 0,
         width: '100%',
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         color: '#ffffff',
@@ -57,5 +58,8 @@ const styles = {
         border: 'none',
         cursor: 'pointer',
         transition: 'color 0.3s',
+    },
+    iconStyle: {
+        marginRight: '8px',
     },
 };
