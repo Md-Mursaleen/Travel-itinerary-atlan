@@ -1,4 +1,4 @@
-# Travel Itinerary Generator - Frontend
+# Travel Itinerary Generator(Frontend)
 
 This is the frontend for our web application, **Travel Itinerary Generator**, built to help users create personalized travel itineraries based on their preferences. The frontend is built using **React** and communicates with the backend API for managing user data and itineraries.
 
@@ -50,13 +50,7 @@ To set up the project locally, follow these steps:
    npm install
    ```
 
-4. Set up environment variables by creating a `.env` file in the root of the `frontend` directory and add the following:
-
-   ```
-   REACT_APP_API_URL=<backend-api-url>
-   ```
-
-5. Start the development server:
+4. Start the development server:
 
    ```bash
    npm start
@@ -90,12 +84,14 @@ frontend/
 │
 ├── public/
 ├── src/
-│   ├── components/        # Reusable components
-│   ├── App.js             # Main app component
-│   ├── index.js           # Entry point of the app
-│   └── ...other files
+│   ├── components/  # Reusable components
+
+├── App.js      # Main app component
+├── index.js    # Entry point of the app
+├── api.js      # Contain API calls
+└── ...other files
+
 │
-├── .env                   # Environment variables
 ├── package.json           # NPM dependencies and scripts
 └── README.md              # Frontend documentation
 ```
