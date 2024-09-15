@@ -11,12 +11,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/create-itinerary" element={<ItineraryForm />} />
+        <Route path='/' element={<Welcome />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/create-itinerary' element={<ItineraryForm />} />
       </Routes>
     </Router>
   );

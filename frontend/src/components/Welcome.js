@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../src/logo.png';
 
 const WelcomePage = () => {
     const navigate = useNavigate();
@@ -15,7 +16,8 @@ const WelcomePage = () => {
     return (
         <div style={styles.container}>
             <div style={styles.headerContainer}>
-                <div style={{ padding: '15px' }}>
+                <img src={logo} alt='Logo' style={styles.imageStyle} />
+                <div style={styles.buttonsContainer}>
                     <button onClick={handleLogin} style={styles.buttonContainer}>
                         Login
                     </button>
@@ -43,20 +45,33 @@ const styles = {
     headerContainer: {
         height: '80vh',
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
         backgroundImage: 'url(https://cdn.dribbble.com/users/1492844/screenshots/3307274/travel.gif)',
         backgroundRepeat: 'repeat-x',
     },
-    buttonContainer: {
-        padding: '14px',
-        width: '100px',
-        height: '45px',
+    imageStyle: {
+        marginTop: '20px',
         marginLeft: '15px',
-        backgroundColor: '#000000',
+        width: '50px',
+        height: '50px'
+    },
+    buttonsContainer: {
+        marginTop: '20px',
+        marginRight: '15px',
+    },
+    buttonContainer: {
+        paddingHorizontal: '16px',
+        paddingVertical: '10px',
+        width: '100px',
+        height: '40px',
+        marginLeft: '15px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#ffffff',
         fontSize: '14px',
         fontWeight: '500',
-        color: '#ffffff',
-        border: 'none',
+        color: '#3350b9',
+        border: '2px solid #3350b9',
         borderRadius: '5px',
         cursor: 'pointer',
         boxShadow: '0 5px 15px rgba(255, 255, 255, 0.8)',
