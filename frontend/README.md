@@ -11,7 +11,6 @@ This is the frontend for our web application, **Travel Itinerary Generator**, bu
 - [Project Structure](#project-structure)
 - [API Integration](#api-integration)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
