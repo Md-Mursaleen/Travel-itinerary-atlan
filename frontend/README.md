@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Travel Itinerary Generator - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for our web application, **Travel Itinerary Generator**, built to help users create personalized travel itineraries based on their preferences. The frontend is built using **React** and communicates with the backend API for managing user data and itineraries.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup and Installation](#setup-and-installation)
+- [Running the App](#running-the-app)
+- [Project Structure](#project-structure)
+- [API Integration](#api-integration)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication**: Sign up and login functionality.
+- **Create Itineraries**: Users can create, view, and update itineraries.
+- **Interactive UI**: Provides an easy-to-use interface for selecting destinations and planning trips.
+- **Integration with Backend**: Fully integrated with the backend API for managing travel data.
+- **Responsive Design**: Fully responsive and optimized for different screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React**: JavaScript library for building user interfaces.
+- **React Router**: For navigation between different pages.
+- **Axios**: For making API calls to the backend.
+- **CSS/SCSS**: For styling components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+To set up the project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/Md-Mursaleen/Travel-itinerary-generator.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the `frontend` directory:
 
-### `npm run eject`
+   ```bash
+   cd frontend
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Set up environment variables by creating a `.env` file in the root of the `frontend` directory and add the following:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```
+   REACT_APP_API_URL=<backend-api-url>
+   ```
 
-## Learn More
+5. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The app will run locally at `http://localhost:3000`.
 
-### Code Splitting
+## Running the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Development**: To run the app in development mode, use:
 
-### Analyzing the Bundle Size
+  ```bash
+  npm start
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Build**: To create a production build, use:
 
-### Making a Progressive Web App
+  ```bash
+  npm run build
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Linting**: Run lint checks using:
+  ```bash
+  npm run lint
+  ```
 
-### Advanced Configuration
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+frontend/
+│
+├── public/
+├── src/
+│   ├── components/        # Reusable components
+│   ├── App.js             # Main app component
+│   ├── index.js           # Entry point of the app
+│   └── ...other files
+│
+├── .env                   # Environment variables
+├── package.json           # NPM dependencies and scripts
+└── README.md              # Frontend documentation
+```
