@@ -11,7 +11,6 @@ This is the frontend for our web application, **Travel Itinerary Generator**, bu
 - [Project Structure](#project-structure)
 - [API Integration](#api-integration)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -95,3 +94,28 @@ frontend/
 ├── package.json           # NPM dependencies and scripts
 └── README.md              # Frontend documentation
 ```
+
+## Contributing
+
+If you'd like to contribute to this project, follow these steps:
+
+1. **Fork** the repository to your GitHub account.
+2. **Clone** your forked repository locally:
+    ```bash
+    git clone https://github.com/your-username/Travel-itinerary-generator.git
+    ```
+3. **Create a new branch** for your changes:
+    ```bash
+    git checkout -b feature-branch-name
+    ```
+4. **Make your changes** and commit them with a descriptive commit message:
+    ```bash
+    git commit -m "Add description of your changes"
+    ```
+5. **Push your branch** to your forked repository:
+    ```bash
+    git push origin feature-branch-name
+    ```
+6. **Submit a pull request** to the main repository, describing the changes you made.
+
+Your contribution will be reviewed, and once approved, it will be merged into the project.
