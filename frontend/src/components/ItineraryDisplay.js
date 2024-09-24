@@ -189,7 +189,7 @@ const ItineraryDisplay = ({ itinerary }) => {
                                         <FontAwesomeIcon icon={faMapMarkerAlt}
                                             size="lg"
                                             style={styles.fontAwesomeIconStyle}
-                                            onClick={() => handleExplorePlaces(day.day)}
+                                            onClick={() => { }}  //upcoming functionality
                                             title={`Explore famous places for Day ${day.day}`} />
                                     </div>
                                 </div>

@@ -45,7 +45,7 @@ function ItineraryForm() {
             <div style={styles.formContainer}>
                 <h2 style={styles.headerTextStyle}>Create Your Travel Itinerary</h2>
                 <div>
-                    <input placeholder="Budget"
+                    <input placeholder="Budget (in ₹)"
                         type="number"
                         value={budget}
                         onChange={(e) => setBudget(e.target.value)}

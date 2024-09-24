@@ -2,7 +2,6 @@ from flask import request, jsonify
 from app.config import gmaps
 from app.places import places_bp
 
-
 # Endpoint for  Get Places according to type
 @places_bp.route('/get-places', methods=['GET'])
 def get_places():
