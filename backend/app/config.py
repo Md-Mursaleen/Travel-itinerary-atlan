@@ -1,11 +1,19 @@
 import os
+import json
 import firebase_admin
 from firebase_admin import credentials
 import google.generativeai as genai
 import googlemaps
 
+# Path to the secret file
+secret_file_path = '/etc/secrets/firebase_credentials.json'
+
+# Load Firebase credentials
+with open(secret_file_path) as f:
+    cred_data = json.load(f)
+
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate(os.getenv("FIREBASE_CREDENTIALS_PATH"))
+cred = credentials.Certificate(cred_data)
 firebase_admin.initialize_app(cred)
 
 # Set up the Google Gemini API key
