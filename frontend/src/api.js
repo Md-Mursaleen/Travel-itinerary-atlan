@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://travel-itinerary-backend-9tzf.onrender.com';
+const API_URL = '';    //your backend hosted url
 
 export const register = async (username, email, password) => {
     try {
