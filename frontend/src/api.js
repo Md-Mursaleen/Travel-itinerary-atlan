@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:5000';
+const API_URL = 'https://travel-itinerary-backend-9tzf.onrender.com';
 
 export const register = async (username, email, password) => {
     try {
